@@ -1,3 +1,0 @@
-/mnt/Data/Code/C/GpuMonitor/cmake-build-debug/CMakeFiles/GpuMonitor.dir
-/mnt/Data/Code/C/GpuMonitor/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/Data/Code/C/GpuMonitor/cmake-build-debug/CMakeFiles/rebuild_cache.dir
