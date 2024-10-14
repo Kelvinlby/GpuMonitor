@@ -1,11 +1,11 @@
 # GpuMonitor
-Access detailed GPU infomation with this shared library.
+Access detailed GPU information with this shared library.
 
 ## Supported platform
 - Nvidia Series
   - Nvidia Datacenter GPU
   - Nvidia RTX Professional GPU
-  - Nvidia Geforce GPU
+  - Nvidia GeForce GPU
 - AMD Series
   - AMD Radeon RX 7900 XTX
   - AMD Radeon RX 7900 XT

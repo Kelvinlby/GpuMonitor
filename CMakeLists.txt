@@ -3,4 +3,5 @@ project(GpuMonitor C)
 
 set(CMAKE_C_STANDARD 23)
 
-add_library(GpuMonitor SHARED library.c)
+add_library(GpuMonitor SHARED library.c
+        nvidia/nvidia_gpu.c)
