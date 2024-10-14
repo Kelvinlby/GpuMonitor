@@ -16,7 +16,12 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CMakeFiles/3.29.6/CMakeSystem.cmake"
+			"path" : "cmake-build-release/CMakeFiles/3.29.6/CMakeSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/kelvin/Application/JetBrains/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeUnixFindMake.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -290,7 +295,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CMakeFiles/3.29.6/CMakeCCompiler.cmake"
+			"path" : "cmake-build-release/CMakeFiles/3.29.6/CMakeCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -419,13 +424,13 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CMakeFiles/3.29.6/CMakeCCompiler.cmake"
+			"path" : "cmake-build-release/CMakeFiles/3.29.6/CMakeCCompiler.cmake"
 		}
 	],
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/mnt/Data/Code/C/GpuMonitor/cmake-build-debug",
+		"build" : "/mnt/Data/Code/C/GpuMonitor/cmake-build-release",
 		"source" : "/mnt/Data/Code/C/GpuMonitor"
 	},
 	"version" : 

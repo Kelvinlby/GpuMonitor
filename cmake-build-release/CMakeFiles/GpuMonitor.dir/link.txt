@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -O3 -DNDEBUG -shared -Wl,-soname,libGpuMonitor.so -o libGpuMonitor.so CMakeFiles/GpuMonitor.dir/library.c.o
