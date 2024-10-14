@@ -1,6 +1,7 @@
 #include "./../library.h"
 
 #include <cuda.h>
+#include <nvml.h>
 
 /** Get total VRAM size
  * @return total RAM in bytes
