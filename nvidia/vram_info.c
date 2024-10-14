@@ -12,7 +12,7 @@
 ULONG nvidiaTotalVram(void) {
     size_t freeMemory, totalMemory;
     cudaMemGetInfo(&freeMemory, &totalMemory);
-    return freeMemory;
+    return totalMemory;
 }
 
 

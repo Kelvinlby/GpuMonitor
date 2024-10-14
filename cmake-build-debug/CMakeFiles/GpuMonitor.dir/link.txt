@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -g -shared -Wl,-soname,libGpuMonitor.so -o libGpuMonitor.so CMakeFiles/GpuMonitor.dir/library.c.o CMakeFiles/GpuMonitor.dir/nvidia/vram_info.c.o CMakeFiles/GpuMonitor.dir/nvidia/cuda_info.c.o CMakeFiles/GpuMonitor.dir/nvidia/tensor_info.c.o
