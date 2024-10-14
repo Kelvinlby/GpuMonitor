@@ -4,6 +4,9 @@
 #include <sys/sysinfo.h>
 
 
+/** Get total RAM size
+ * @return total RAM in bytes
+ */
 ULONG getTotalRam(void) {
     struct sysinfo info;
 
@@ -16,6 +19,9 @@ ULONG getTotalRam(void) {
 }
 
 
+/** Get free RAM size
+ * @return free RAM in bytes
+ */
 ULONG getFreeRam(void) {
     struct sysinfo info;
 
@@ -28,7 +34,10 @@ ULONG getFreeRam(void) {
 }
 
 
-UINT8 getRamUsage(void) {
+/** Get system RAM utilization
+ * @return 1000 times the utilization rate
+ */
+UINT16 getRamUsage(void) {
     struct sysinfo info;
 
     if (sysinfo(&info) != 0) {
@@ -36,5 +45,5 @@ UINT8 getRamUsage(void) {
         return 1;
     }
 
-    return (UINT8) (100(1 - (double) (info.freeram * info.mem_unit) / (double) (info.totalram * info.mem_unit)));
+    return (UINT16) (1000 * (1 - (double) (info.freeram * info.mem_unit) / (double) (info.totalram * info.mem_unit)));
 }

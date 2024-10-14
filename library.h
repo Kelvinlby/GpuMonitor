@@ -16,6 +16,6 @@
 
 ULONG getTotalRam(void);
 ULONG getFreeRam(void);
-UINT8 getRamUsage(void);
+UINT16 getRamUsage(void);
 
 #endif //GPUMONITOR_LIBRARY_H
