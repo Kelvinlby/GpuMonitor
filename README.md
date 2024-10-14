@@ -17,5 +17,5 @@ Access detailed GPU infomation with this shared library.
 > For full AMD Compatibility matrix, refer to [ROCm Doc](https://rocm.docs.amd.com/en/latest/compatibility/compatibility-matrix.html)
 
 ## Pre-requirements
-- Linux System required
-- CUDA or ROCm 6.1.3 (or newer)
+- Linux system required (tested on Ubuntu)
+- CUDA 12.6 (or newer) and ROCm 6.1.3 (or newer)
