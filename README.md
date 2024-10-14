@@ -14,7 +14,7 @@ Access detailed GPU infomation with this shared library.
   - AMD Radeon PRO W7900DS
   - AMD Radeon PRO W7800
 
-> For full AMD Compatibility matrix, refer to https://rocm.docs.amd.com/en/latest/compatibility/compatibility-matrix.html
+> For full AMD Compatibility matrix, refer to (ROCm Doc)[https://rocm.docs.amd.com/en/latest/compatibility/compatibility-matrix.html]
 
 ## Pre-requirements
 - Linux System required
