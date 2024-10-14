@@ -45,5 +45,5 @@ UINT16 getRamUsage(void) {
         return 1;
     }
 
-    return (UINT16) (1000 * (1 - (double) (info.freeram * info.mem_unit) / (double) (info.totalram * info.mem_unit)));
+    return (UINT16) (1000 * (1 - (FLOAT32) (info.freeram * info.mem_unit) / (FLOAT32) (info.totalram * info.mem_unit)));
 }
