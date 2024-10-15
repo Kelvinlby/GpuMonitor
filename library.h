@@ -5,13 +5,13 @@
 
 /********** Data Types  *********/
 // Unsigned integers
-#define UINT8 __uint8_t
+#define UINT8  __uint8_t
 #define UINT16 __uint16_t
 #define UINT32 __uint32_t
 #define UINT64 __uint64_t
 
 // Signed integers
-#define INT8 __int8_t
+#define INT8  __int8_t
 #define INT16 __int16_t
 #define INT32 __int32_t
 #define INT64 __int64_t
@@ -22,13 +22,13 @@
 
 /****  Function Declarations  ****/
 // CPU
-ULONG getTotalRam(void);
-ULONG getFreeRam(void);
+UINT64 getTotalRam(void);
+UINT64 getFreeRam(void);
 UINT16 getRamUsage(void);
 
 // Nvidia
-ULONG nvidiaTotalVram(void);
-ULONG nvidiaFreeVram(void);
+UINT64 nvidiaTotalVram(void);
+UINT64 nvidiaFreeVram(void);
 UINT16 nvidiaVramUsage(void);
 
 // AMD
