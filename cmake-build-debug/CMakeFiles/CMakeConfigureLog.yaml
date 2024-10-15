@@ -282,3 +282,43 @@ events:
       Running the C compiler's linker: "/usr/bin/ld" "-v"
       GNU ld (GNU Binutils for Ubuntu) 2.42
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/kelvin/Application/JetBrains/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/kelvin/Application/JetBrains/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/home/kelvin/Application/JetBrains/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/home/kelvin/Application/JetBrains/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/home/kelvin/Application/JetBrains/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/FindCUDA.cmake:1071 (find_package)"
+      - "CMakeLists.txt:14 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/mnt/Data/Code/C/GpuMonitor/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ylNP7D"
+      binary: "/mnt/Data/Code/C/GpuMonitor/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ylNP7D"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fPIC"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/Data/Code/C/GpuMonitor/cmake;/home/kelvin/Application/JetBrains/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/Data/Code/C/GpuMonitor/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ylNP7D'
+        
+        Run Build Command(s): /home/kelvin/Application/JetBrains/clion/bin/cmake/linux/x64/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_179ff/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_179ff.dir/build.make CMakeFiles/cmTC_179ff.dir/build
+        gmake[1]: Entering directory '/mnt/Data/Code/C/GpuMonitor/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ylNP7D'
+        Building C object CMakeFiles/cmTC_179ff.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -std=gnu2x -fdiagnostics-color=always -o CMakeFiles/cmTC_179ff.dir/src.c.o -c /mnt/Data/Code/C/GpuMonitor/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ylNP7D/src.c
+        Linking C executable cmTC_179ff
+        /home/kelvin/Application/JetBrains/clion/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_179ff.dir/link.txt --verbose=1
+        /usr/bin/cc -fPIC  CMakeFiles/cmTC_179ff.dir/src.c.o -o cmTC_179ff
+        gmake[1]: Leaving directory '/mnt/Data/Code/C/GpuMonitor/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ylNP7D'
+        
+      exitCode: 0
+...

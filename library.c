@@ -9,20 +9,16 @@
  * @return platform code:   0 - CPU only;    1 - Nvidia GPU available;  2 - AMD GPU available;
  */
 UINT8 getPlatform(void) {
-    int deviceCount;
+    // Nvidia platform checking
+    int deviceCount = 0;
     const cudaError_t error_id = cudaGetDeviceCount(&deviceCount);
 
-    if (error_id != cudaSuccess) {
+    if (error_id == cudaSuccess && deviceCount > 0) {
         return 1;
     }
 
-    if (deviceCount == 0) {
-        printf("There are no available device(s) that support CUDA\n");
-        printf("Result: CUDA is NOT available\n");
-    } else {
-        printf("Detected %d CUDA Capable device(s)\n", deviceCount);
-        printf("Result: CUDA is available\n");
-    }
+    // AMD platform checking
+    /* @Patrick: Your show-time now!! */
 
     return 0;
 }
