@@ -11,8 +11,18 @@ set(CMAKE_C_STANDARD 23)
 add_library(GpuMonitor SHARED library.c
         nvidia/vram_info.c
         nvidia/processor_info.c
+        amd/rocm_smi.h
 )
 
-include_directories(/usr/local/cuda/include)
+#Change "/home/usr" to GpuMonitor installation directory
+#!!!!!It's strongly recommended that you should not work with "rocm_smi.h" from your local ROCm lib!!!!!
+include_directories(/usr/local/cuda/include
+        /home/usr/GpuMonitor/amd/rocm_smi.h
+)
+
 find_package(CUDA REQUIRED)
 target_link_libraries(GpuMonitor ${CUDA_LIBRARIES} nvidia-ml)
+
+# Change ../rocm-6.1.3/.. to your version
+target_link_libraries(GpuMonitor /opt/rocm-6.1.3/lib/librocm_smi64.so)
+
