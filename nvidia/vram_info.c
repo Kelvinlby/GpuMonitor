@@ -1,9 +1,6 @@
 #include "./../library.h"
 
-#include <stdio.h>
-#include <cuda.h>
 #include <cuda_runtime_api.h>
-#include <nvml.h>
 
 
 /** Get total VRAM size
