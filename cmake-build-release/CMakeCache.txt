@@ -343,6 +343,9 @@ GpuMonitor_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 GpuMonitor_SOURCE_DIR:STATIC=/mnt/Data/Code/C/GpuMonitor
 
+//The directory containing a CMake configuration file for NVML.
+NVML_DIR:PATH=NVML_DIR-NOTFOUND
+
 
 ########################
 # INTERNAL cache entries

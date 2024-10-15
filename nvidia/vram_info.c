@@ -24,10 +24,10 @@ UINT64 nvidiaFreeVram(void) {
 
 
 /** Get system RAM utilization
- * @return 1000 times the utilization rate
+ * @return percent of utilization rate
  */
-UINT16 nvidiaVramUsage(void) {
+UINT8 nvidiaVramUsage(void) {
     size_t freeMemory, totalMemory;
     cudaMemGetInfo(&freeMemory, &totalMemory);
-    return (UINT16) (1000 * (1 - (FLOAT32) freeMemory / (FLOAT32) totalMemory));
+    return (UINT8) (100 * (1 - (FLOAT32) freeMemory / (FLOAT32) totalMemory));
 }

@@ -140,6 +140,8 @@ libGpuMonitor.so: CMakeFiles/GpuMonitor.dir/nvidia/vram_info.c.o
 libGpuMonitor.so: CMakeFiles/GpuMonitor.dir/nvidia/cuda_info.c.o
 libGpuMonitor.so: CMakeFiles/GpuMonitor.dir/nvidia/tensor_info.c.o
 libGpuMonitor.so: CMakeFiles/GpuMonitor.dir/build.make
+libGpuMonitor.so: /usr/local/cuda/lib64/libcudart_static.a
+libGpuMonitor.so: /usr/lib/x86_64-linux-gnu/librt.a
 libGpuMonitor.so: CMakeFiles/GpuMonitor.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/Data/Code/C/GpuMonitor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library libGpuMonitor.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GpuMonitor.dir/link.txt --verbose=$(VERBOSE)

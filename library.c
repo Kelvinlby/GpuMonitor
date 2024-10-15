@@ -1,7 +1,31 @@
 #include "library.h"
 
 #include <stdio.h>
+#include <cuda_runtime.h>
 #include <sys/sysinfo.h>
+
+
+/** Get which platform is supported (Nvidia platform is prioritized)
+ * @return platform code:   0 - CPU only;    1 - Nvidia GPU available;  2 - AMD GPU available;
+ */
+UINT8 getPlatform(void) {
+    int deviceCount;
+    const cudaError_t error_id = cudaGetDeviceCount(&deviceCount);
+
+    if (error_id != cudaSuccess) {
+        return 1;
+    }
+
+    if (deviceCount == 0) {
+        printf("There are no available device(s) that support CUDA\n");
+        printf("Result: CUDA is NOT available\n");
+    } else {
+        printf("Detected %d CUDA Capable device(s)\n", deviceCount);
+        printf("Result: CUDA is available\n");
+    }
+
+    return 0;
+}
 
 
 /** Get total RAM size
@@ -35,9 +59,9 @@ UINT64 getFreeRam(void) {
 
 
 /** Get system RAM utilization
- * @return 1000 times the utilization rate
+ * @return percentage of utilization rate
  */
-UINT16 getRamUsage(void) {
+UINT8 getRamUsage(void) {
     struct sysinfo info;
 
     if (sysinfo(&info) != 0) {
@@ -45,5 +69,5 @@ UINT16 getRamUsage(void) {
         return 1;
     }
 
-    return (UINT16) (1000 * (1 - (FLOAT32) (info.freeram * info.mem_unit) / (FLOAT32) (info.totalram * info.mem_unit)));
+    return (UINT8) (100 * (1 - (FLOAT32) (info.freeram * info.mem_unit) / (FLOAT32) (info.totalram * info.mem_unit)));
 }
