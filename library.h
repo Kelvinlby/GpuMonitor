@@ -9,7 +9,6 @@
 #define UINT16 __uint16_t
 #define UINT32 __uint32_t
 #define UINT64 __uint64_t
-#define ULONG __u_long
 
 // Signed integers
 #define INT8 __int8_t
