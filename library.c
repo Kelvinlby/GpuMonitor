@@ -7,7 +7,7 @@
 /** Get total RAM size
  * @return total RAM in bytes
  */
-ULONG getTotalRam(void) {
+UINT64 getTotalRam(void) {
     struct sysinfo info;
 
     if (sysinfo(&info) != 0) {
@@ -22,7 +22,7 @@ ULONG getTotalRam(void) {
 /** Get free RAM size
  * @return free RAM in bytes
  */
-ULONG getFreeRam(void) {
+UINT64 getFreeRam(void) {
     struct sysinfo info;
 
     if (sysinfo(&info) != 0) {
