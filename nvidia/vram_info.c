@@ -9,7 +9,7 @@
 /** Get total VRAM size
  * @return total RAM in bytes
  */
-ULONG nvidiaTotalVram(void) {
+UINT64 nvidiaTotalVram(void) {
     size_t freeMemory, totalMemory;
     cudaMemGetInfo(&freeMemory, &totalMemory);
     return totalMemory;
@@ -19,7 +19,7 @@ ULONG nvidiaTotalVram(void) {
 /** Get free RAM size
  * @return free RAM in bytes
  */
-ULONG nvidiaFreeVram(void) {
+UINT64 nvidiaFreeVram(void) {
     size_t freeMemory, totalMemory;
     cudaMemGetInfo(&freeMemory, &totalMemory);
     return freeMemory;
