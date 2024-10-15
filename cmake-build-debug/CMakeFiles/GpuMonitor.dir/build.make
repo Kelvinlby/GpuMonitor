@@ -97,53 +97,37 @@ CMakeFiles/GpuMonitor.dir/nvidia/vram_info.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/GpuMonitor.dir/nvidia/vram_info.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/Data/Code/C/GpuMonitor/nvidia/vram_info.c -o CMakeFiles/GpuMonitor.dir/nvidia/vram_info.c.s
 
-CMakeFiles/GpuMonitor.dir/nvidia/cuda_info.c.o: CMakeFiles/GpuMonitor.dir/flags.make
-CMakeFiles/GpuMonitor.dir/nvidia/cuda_info.c.o: /mnt/Data/Code/C/GpuMonitor/nvidia/cuda_info.c
-CMakeFiles/GpuMonitor.dir/nvidia/cuda_info.c.o: CMakeFiles/GpuMonitor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/Data/Code/C/GpuMonitor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/GpuMonitor.dir/nvidia/cuda_info.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/GpuMonitor.dir/nvidia/cuda_info.c.o -MF CMakeFiles/GpuMonitor.dir/nvidia/cuda_info.c.o.d -o CMakeFiles/GpuMonitor.dir/nvidia/cuda_info.c.o -c /mnt/Data/Code/C/GpuMonitor/nvidia/cuda_info.c
+CMakeFiles/GpuMonitor.dir/nvidia/processor_info.c.o: CMakeFiles/GpuMonitor.dir/flags.make
+CMakeFiles/GpuMonitor.dir/nvidia/processor_info.c.o: /mnt/Data/Code/C/GpuMonitor/nvidia/processor_info.c
+CMakeFiles/GpuMonitor.dir/nvidia/processor_info.c.o: CMakeFiles/GpuMonitor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/Data/Code/C/GpuMonitor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/GpuMonitor.dir/nvidia/processor_info.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/GpuMonitor.dir/nvidia/processor_info.c.o -MF CMakeFiles/GpuMonitor.dir/nvidia/processor_info.c.o.d -o CMakeFiles/GpuMonitor.dir/nvidia/processor_info.c.o -c /mnt/Data/Code/C/GpuMonitor/nvidia/processor_info.c
 
-CMakeFiles/GpuMonitor.dir/nvidia/cuda_info.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/GpuMonitor.dir/nvidia/cuda_info.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/Data/Code/C/GpuMonitor/nvidia/cuda_info.c > CMakeFiles/GpuMonitor.dir/nvidia/cuda_info.c.i
+CMakeFiles/GpuMonitor.dir/nvidia/processor_info.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/GpuMonitor.dir/nvidia/processor_info.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/Data/Code/C/GpuMonitor/nvidia/processor_info.c > CMakeFiles/GpuMonitor.dir/nvidia/processor_info.c.i
 
-CMakeFiles/GpuMonitor.dir/nvidia/cuda_info.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/GpuMonitor.dir/nvidia/cuda_info.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/Data/Code/C/GpuMonitor/nvidia/cuda_info.c -o CMakeFiles/GpuMonitor.dir/nvidia/cuda_info.c.s
-
-CMakeFiles/GpuMonitor.dir/nvidia/tensor_info.c.o: CMakeFiles/GpuMonitor.dir/flags.make
-CMakeFiles/GpuMonitor.dir/nvidia/tensor_info.c.o: /mnt/Data/Code/C/GpuMonitor/nvidia/tensor_info.c
-CMakeFiles/GpuMonitor.dir/nvidia/tensor_info.c.o: CMakeFiles/GpuMonitor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/Data/Code/C/GpuMonitor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/GpuMonitor.dir/nvidia/tensor_info.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/GpuMonitor.dir/nvidia/tensor_info.c.o -MF CMakeFiles/GpuMonitor.dir/nvidia/tensor_info.c.o.d -o CMakeFiles/GpuMonitor.dir/nvidia/tensor_info.c.o -c /mnt/Data/Code/C/GpuMonitor/nvidia/tensor_info.c
-
-CMakeFiles/GpuMonitor.dir/nvidia/tensor_info.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/GpuMonitor.dir/nvidia/tensor_info.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/Data/Code/C/GpuMonitor/nvidia/tensor_info.c > CMakeFiles/GpuMonitor.dir/nvidia/tensor_info.c.i
-
-CMakeFiles/GpuMonitor.dir/nvidia/tensor_info.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/GpuMonitor.dir/nvidia/tensor_info.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/Data/Code/C/GpuMonitor/nvidia/tensor_info.c -o CMakeFiles/GpuMonitor.dir/nvidia/tensor_info.c.s
+CMakeFiles/GpuMonitor.dir/nvidia/processor_info.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/GpuMonitor.dir/nvidia/processor_info.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/Data/Code/C/GpuMonitor/nvidia/processor_info.c -o CMakeFiles/GpuMonitor.dir/nvidia/processor_info.c.s
 
 # Object files for target GpuMonitor
 GpuMonitor_OBJECTS = \
 "CMakeFiles/GpuMonitor.dir/library.c.o" \
 "CMakeFiles/GpuMonitor.dir/nvidia/vram_info.c.o" \
-"CMakeFiles/GpuMonitor.dir/nvidia/cuda_info.c.o" \
-"CMakeFiles/GpuMonitor.dir/nvidia/tensor_info.c.o"
+"CMakeFiles/GpuMonitor.dir/nvidia/processor_info.c.o"
 
 # External object files for target GpuMonitor
 GpuMonitor_EXTERNAL_OBJECTS =
 
 libGpuMonitor.so: CMakeFiles/GpuMonitor.dir/library.c.o
 libGpuMonitor.so: CMakeFiles/GpuMonitor.dir/nvidia/vram_info.c.o
-libGpuMonitor.so: CMakeFiles/GpuMonitor.dir/nvidia/cuda_info.c.o
-libGpuMonitor.so: CMakeFiles/GpuMonitor.dir/nvidia/tensor_info.c.o
+libGpuMonitor.so: CMakeFiles/GpuMonitor.dir/nvidia/processor_info.c.o
 libGpuMonitor.so: CMakeFiles/GpuMonitor.dir/build.make
 libGpuMonitor.so: /usr/local/cuda/lib64/libcudart_static.a
 libGpuMonitor.so: /usr/lib/x86_64-linux-gnu/librt.a
 libGpuMonitor.so: CMakeFiles/GpuMonitor.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/Data/Code/C/GpuMonitor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library libGpuMonitor.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/Data/Code/C/GpuMonitor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library libGpuMonitor.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GpuMonitor.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

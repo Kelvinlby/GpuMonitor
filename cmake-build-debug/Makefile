@@ -153,53 +153,29 @@ library.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/library.c.s
 .PHONY : library.c.s
 
-nvidia/cuda_info.o: nvidia/cuda_info.c.o
-.PHONY : nvidia/cuda_info.o
+nvidia/processor_info.o: nvidia/processor_info.c.o
+.PHONY : nvidia/processor_info.o
 
 # target to build an object file
-nvidia/cuda_info.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/nvidia/cuda_info.c.o
-.PHONY : nvidia/cuda_info.c.o
+nvidia/processor_info.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/nvidia/processor_info.c.o
+.PHONY : nvidia/processor_info.c.o
 
-nvidia/cuda_info.i: nvidia/cuda_info.c.i
-.PHONY : nvidia/cuda_info.i
-
-# target to preprocess a source file
-nvidia/cuda_info.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/nvidia/cuda_info.c.i
-.PHONY : nvidia/cuda_info.c.i
-
-nvidia/cuda_info.s: nvidia/cuda_info.c.s
-.PHONY : nvidia/cuda_info.s
-
-# target to generate assembly for a file
-nvidia/cuda_info.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/nvidia/cuda_info.c.s
-.PHONY : nvidia/cuda_info.c.s
-
-nvidia/tensor_info.o: nvidia/tensor_info.c.o
-.PHONY : nvidia/tensor_info.o
-
-# target to build an object file
-nvidia/tensor_info.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/nvidia/tensor_info.c.o
-.PHONY : nvidia/tensor_info.c.o
-
-nvidia/tensor_info.i: nvidia/tensor_info.c.i
-.PHONY : nvidia/tensor_info.i
+nvidia/processor_info.i: nvidia/processor_info.c.i
+.PHONY : nvidia/processor_info.i
 
 # target to preprocess a source file
-nvidia/tensor_info.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/nvidia/tensor_info.c.i
-.PHONY : nvidia/tensor_info.c.i
+nvidia/processor_info.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/nvidia/processor_info.c.i
+.PHONY : nvidia/processor_info.c.i
 
-nvidia/tensor_info.s: nvidia/tensor_info.c.s
-.PHONY : nvidia/tensor_info.s
+nvidia/processor_info.s: nvidia/processor_info.c.s
+.PHONY : nvidia/processor_info.s
 
 # target to generate assembly for a file
-nvidia/tensor_info.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/nvidia/tensor_info.c.s
-.PHONY : nvidia/tensor_info.c.s
+nvidia/processor_info.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/nvidia/processor_info.c.s
+.PHONY : nvidia/processor_info.c.s
 
 nvidia/vram_info.o: nvidia/vram_info.c.o
 .PHONY : nvidia/vram_info.o
@@ -237,12 +213,9 @@ help:
 	@echo "... library.o"
 	@echo "... library.i"
 	@echo "... library.s"
-	@echo "... nvidia/cuda_info.o"
-	@echo "... nvidia/cuda_info.i"
-	@echo "... nvidia/cuda_info.s"
-	@echo "... nvidia/tensor_info.o"
-	@echo "... nvidia/tensor_info.i"
-	@echo "... nvidia/tensor_info.s"
+	@echo "... nvidia/processor_info.o"
+	@echo "... nvidia/processor_info.i"
+	@echo "... nvidia/processor_info.s"
 	@echo "... nvidia/vram_info.o"
 	@echo "... nvidia/vram_info.i"
 	@echo "... nvidia/vram_info.s"

@@ -10,8 +10,8 @@ set(CMAKE_C_STANDARD 23)
 
 add_library(GpuMonitor SHARED library.c
         nvidia/vram_info.c
-        nvidia/cuda_info.c
-        nvidia/tensor_info.c)
+        nvidia/processor_info.c
+)
 
 include_directories(/usr/local/cuda/include)
 find_package(CUDA REQUIRED)

@@ -81,12 +81,12 @@ clean: CMakeFiles/GpuMonitor.dir/clean
 CMakeFiles/GpuMonitor.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/Data/Code/C/GpuMonitor/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target GpuMonitor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/Data/Code/C/GpuMonitor/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target GpuMonitor"
 .PHONY : CMakeFiles/GpuMonitor.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/GpuMonitor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/Data/Code/C/GpuMonitor/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/Data/Code/C/GpuMonitor/cmake-build-debug/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/GpuMonitor.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/Data/Code/C/GpuMonitor/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/GpuMonitor.dir/rule

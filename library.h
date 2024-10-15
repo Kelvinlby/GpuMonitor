@@ -31,7 +31,7 @@ UINT8  getRamUsage(void);
 UINT64 nvidiaTotalVram(void);
 UINT64 nvidiaFreeVram(void);
 UINT8  nvidiaVramUsage(void);
-UINT8  nvidiaCudaUsage(void);
+UINT8  nvidiaGpuUsage(void);
 
 // AMD
 

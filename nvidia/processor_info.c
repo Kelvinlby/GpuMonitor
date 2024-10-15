@@ -7,7 +7,7 @@
 /** Get average Cuda core utilization of all Nvidia GPUs
  * @return percentage of Cuda core utilization
  */
-UINT8 nvidiaCudaUsage(void) {
+UINT8 nvidiaGpuUsage(void) {
     INT32 deviceCount;
     FLOAT32 gpuUsage = 0.0f;
     nvmlDevice_t device;
