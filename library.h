@@ -29,14 +29,14 @@ UINT8  getRamUsage(void);
 
 // Nvidia
 UINT64 nvidiaTotalVram(void);
-UINT64 nvidiaFreeVram(void);
+UINT64 nvidiaUsedVram(void);
 UINT8  nvidiaVramUsage(void);
 UINT8  nvidiaGpuUsage(void);
 
 // AMD
 UINT64 amdTotalVram(void);
-UINT64 amdFreeVram(void);
+UINT64 amdUsedVram(void);
 UINT8  amdVramUsage(void);
-UINT8  amdGpuUsage(void);
+UINT32 amdGpuUsage(void);
 
 #endif //GPUMONITOR_LIBRARY_H

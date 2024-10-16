@@ -2,17 +2,17 @@
 #include "./rocm_smi.h"
 
 
-/** Get utilization of amd gpu
- * @return percentage of Cuda core utilization
+/** Get percentage of time device is busy doing any processing
+ * @return percentage of core utilization
  */
 UINT32 amdGpuUsage(void){
-    rsmi_init(0)
+    rsmi_init(0);
 
-    UINT32 useage;
-    rsmi_dev_busy_percent_get(0, &useage);
+    UINT32 usage;
+    rsmi_dev_busy_percent_get(0, &usage);
 
-    UINT32 useage_buf = useage;
+    UINT32 usage_buf = usage;
     rsmi_shut_down();
 
-    return useage;
+    return usage_buf;
 }
