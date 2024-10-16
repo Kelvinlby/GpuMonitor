@@ -37,5 +37,6 @@ UINT8  nvidiaGpuUsage(void);
 UINT64 amdTotalVram(void);
 UINT64 amdFreeVram(void);
 UINT8  amdVramUsage(void);
+UINT8  amdGpuUsage(void);
 
 #endif //GPUMONITOR_LIBRARY_H
