@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/mnt/Data/Code/C/GpuMonitor/amd/processor_info.c" "CMakeFiles/GpuMonitor.dir/amd/processor_info.c.o" "gcc" "CMakeFiles/GpuMonitor.dir/amd/processor_info.c.o.d"
+  "/mnt/Data/Code/C/GpuMonitor/amd/vram_info.c" "CMakeFiles/GpuMonitor.dir/amd/vram_info.c.o" "gcc" "CMakeFiles/GpuMonitor.dir/amd/vram_info.c.o.d"
   "/mnt/Data/Code/C/GpuMonitor/library.c" "CMakeFiles/GpuMonitor.dir/library.c.o" "gcc" "CMakeFiles/GpuMonitor.dir/library.c.o.d"
   "/mnt/Data/Code/C/GpuMonitor/nvidia/processor_info.c" "CMakeFiles/GpuMonitor.dir/nvidia/processor_info.c.o" "gcc" "CMakeFiles/GpuMonitor.dir/nvidia/processor_info.c.o.d"
   "/mnt/Data/Code/C/GpuMonitor/nvidia/vram_info.c" "CMakeFiles/GpuMonitor.dir/nvidia/vram_info.c.o" "gcc" "CMakeFiles/GpuMonitor.dir/nvidia/vram_info.c.o.d"

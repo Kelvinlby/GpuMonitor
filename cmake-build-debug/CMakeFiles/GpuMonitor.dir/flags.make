@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -DGpuMonitor_EXPORTS
 
-C_INCLUDES = -I/usr/local/cuda/include
+C_INCLUDES = -I/usr/local/cuda/include -I/home/usr/GpuMonitor/amd/rocm_smi.h
 
 C_FLAGS = -g -std=gnu2x -fPIC -fdiagnostics-color=always
 

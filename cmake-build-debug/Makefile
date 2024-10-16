@@ -129,6 +129,54 @@ GpuMonitor/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/build
 .PHONY : GpuMonitor/fast
 
+amd/processor_info.o: amd/processor_info.c.o
+.PHONY : amd/processor_info.o
+
+# target to build an object file
+amd/processor_info.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/amd/processor_info.c.o
+.PHONY : amd/processor_info.c.o
+
+amd/processor_info.i: amd/processor_info.c.i
+.PHONY : amd/processor_info.i
+
+# target to preprocess a source file
+amd/processor_info.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/amd/processor_info.c.i
+.PHONY : amd/processor_info.c.i
+
+amd/processor_info.s: amd/processor_info.c.s
+.PHONY : amd/processor_info.s
+
+# target to generate assembly for a file
+amd/processor_info.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/amd/processor_info.c.s
+.PHONY : amd/processor_info.c.s
+
+amd/vram_info.o: amd/vram_info.c.o
+.PHONY : amd/vram_info.o
+
+# target to build an object file
+amd/vram_info.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/amd/vram_info.c.o
+.PHONY : amd/vram_info.c.o
+
+amd/vram_info.i: amd/vram_info.c.i
+.PHONY : amd/vram_info.i
+
+# target to preprocess a source file
+amd/vram_info.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/amd/vram_info.c.i
+.PHONY : amd/vram_info.c.i
+
+amd/vram_info.s: amd/vram_info.c.s
+.PHONY : amd/vram_info.s
+
+# target to generate assembly for a file
+amd/vram_info.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/amd/vram_info.c.s
+.PHONY : amd/vram_info.c.s
+
 library.o: library.c.o
 .PHONY : library.o
 
@@ -210,6 +258,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... GpuMonitor"
+	@echo "... amd/processor_info.o"
+	@echo "... amd/processor_info.i"
+	@echo "... amd/processor_info.s"
+	@echo "... amd/vram_info.o"
+	@echo "... amd/vram_info.i"
+	@echo "... amd/vram_info.s"
 	@echo "... library.o"
 	@echo "... library.i"
 	@echo "... library.s"

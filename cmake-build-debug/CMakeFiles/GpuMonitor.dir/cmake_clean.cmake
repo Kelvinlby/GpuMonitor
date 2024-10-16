@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/GpuMonitor.dir/amd/processor_info.c.o"
+  "CMakeFiles/GpuMonitor.dir/amd/processor_info.c.o.d"
+  "CMakeFiles/GpuMonitor.dir/amd/vram_info.c.o"
+  "CMakeFiles/GpuMonitor.dir/amd/vram_info.c.o.d"
   "CMakeFiles/GpuMonitor.dir/library.c.o"
   "CMakeFiles/GpuMonitor.dir/library.c.o.d"
   "CMakeFiles/GpuMonitor.dir/nvidia/processor_info.c.o"
