@@ -36,3 +36,5 @@ if(CMAKE_GENERATOR MATCHES "Visual Studio")
   endif()
 endif()
 ```
+> Please use 'rocm_smi.h' in this project to avoid errors when linking libraries.
+
