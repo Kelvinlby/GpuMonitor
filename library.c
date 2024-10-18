@@ -48,3 +48,15 @@ UINT64 getFreeRam(void) {
 
     return info.freeram * info.mem_unit;
 }
+
+
+UINT8 getRamUsage(void) {
+    struct sysinfo info;
+
+    if (sysinfo(&info) != 0) {
+        perror("sysinfo");
+        return 1;
+    }
+
+    return (UINT8) (100 * (1 - (FLOAT32) (info.freeram * info.mem_unit) / (FLOAT32) (info.totalram * info.mem_unit)));
+}
