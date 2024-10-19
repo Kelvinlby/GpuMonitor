@@ -22,15 +22,17 @@ UINT8 getPlatform(void) {
     // AMD platform checking
     rsmi_init(0);
     UINT64 deviceId;
-    rsmi_status_t status = rsmi_dev_guid_get(0, &deviceId);
+    const rsmi_status_t status = rsmi_dev_guid_get(0, &deviceId);
 
     if (status == RSMI_STATUS_SUCCESS) {
       return 2;
     }
+
     rsmi_shut_down();
 
     return 0;
 }
+
 
 /** Get total RAM size
  * @return total RAM in MB
@@ -58,13 +60,14 @@ UINT32 getFreeRam(void) {
         return 1;
     }
 
-    UINT32 free = info.freeram * info.mem_unit / (1024 * 1024);
     UINT32 cached = 0;
 
     FILE *f = fopen("/proc/meminfo", "r");
+
     if (f == NULL) {
         perror("Error opening /proc/meminfo");
     }
+
     char line[256];
 
     while (fgets(line, sizeof(line), f)) {
@@ -73,8 +76,10 @@ UINT32 getFreeRam(void) {
             break;
         }
     }
+
     fclose(f);
-    return cached / 1024 + free;
+
+    return cached / 1024 + info.freeram * info.mem_unit / (1024 * 1024);
 }
 
 
@@ -89,7 +94,6 @@ UINT8 getRamUsage(void) {
         return 1;
     }
 
-    UINT32 free = info.freeram * info.mem_unit / (1024 * 1024);
     UINT32 cached = 0;
 
     FILE *f = fopen("/proc/meminfo", "r");
@@ -104,9 +108,8 @@ UINT8 getRamUsage(void) {
             break;
         }
     }
-    fclose(f);
-    UINT32 total = info.totalram * info.mem_unit / (1024 * 1024);
-    UINT32 available = cached / 1024 + free;
 
-    return (UINT8)(100 * (1 - (FLOAT32)(available) / (FLOAT32)(total)));
+    fclose(f);
+
+    return (UINT8) (100 * (1 - (FLOAT32) (cached * 1024 + info.freeram * info.mem_unit) / (FLOAT32) (info.totalram * info.mem_unit)));
 }
