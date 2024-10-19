@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.29)
 project(GpuMonitor C)
 
 # Set custom cmake module path here
-set(MY_CMAKE_MODULE_PATH "/home/patrick/clion-2024.2.1/bin/cmake/linux/x64/share/cmake-3.29/Modules")
+set(MY_CMAKE_MODULE_PATH "/home/kelvin/Application/JetBrains/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules" "home/patrick/clion-2024.2.1/bin/cmake/linux/x64/share/cmake-3.29/Modules")
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${MY_CMAKE_MODULE_PATH})
 

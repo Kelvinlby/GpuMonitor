@@ -1,4 +1,19 @@
 /home/kelvin/Application/JetBrains/clion/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /mnt/Data/Code/C/GpuMonitor -B /mnt/Data/Code/C/GpuMonitor/cmake-build-debug
--- Configuring done (0.0s)
--- Generating done (0.0s)
--- Build files have been written to: /mnt/Data/Code/C/GpuMonitor/cmake-build-debug
+CMake Error at CMakeLists.txt:24 (find_package):
+  By not providing "FindROCM.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "ROCM", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "ROCM" with any of
+  the following names:
+
+    ROCMConfig.cmake
+    rocm-config.cmake
+
+  Add the installation prefix of "ROCM" to CMAKE_PREFIX_PATH or set
+  "ROCM_DIR" to a directory containing one of the above files.  If "ROCM"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+
+
+-- Configuring incomplete, errors occurred!
