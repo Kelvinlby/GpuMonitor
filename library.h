@@ -23,19 +23,19 @@
 /****  Function Declarations  ****/
 // CPU
 UINT8  getPlatform(void);
-UINT64 getTotalRam(void);
-UINT64 getFreeRam(void);
+UINT32 getTotalRam(void);
+UINT32 getFreeRam(void);
 UINT8  getRamUsage(void);
 
 // Nvidia
-UINT64 nvidiaTotalVram(void);
-UINT64 nvidiaUsedVram(void);
+UINT32 nvidiaTotalVram(void);
+UINT32 nvidiaUsedVram(void);
 UINT8  nvidiaVramUsage(void);
 UINT8  nvidiaGpuUsage(void);
 
 // AMD
-UINT64 amdTotalVram(void);
-UINT64 amdUsedVram(void);
+UINT32 amdTotalVram(void);
+UINT32 amdUsedVram(void);
 UINT8  amdVramUsage(void);
 UINT32 amdGpuUsage(void);
 

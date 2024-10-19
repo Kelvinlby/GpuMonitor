@@ -4,22 +4,22 @@
 
 
 /** Get total VRAM size
- * @return total VRAM in bytes
+ * @return total VRAM in MB
  */
-UINT64 nvidiaTotalVram(void) {
+UINT32 nvidiaTotalVram(void) {
     size_t freeMemory, totalMemory;
     cudaMemGetInfo(&freeMemory, &totalMemory);
-    return totalMemory;
+    return totalMemory / (1024 * 1024);
 }
 
 
 /** Get used VRAM size
- * @return used VRAM in bytes
+ * @return used VRAM in MB
  */
-UINT64 nvidiaUsedVram(void) {
+UINT32 nvidiaUsedVram(void) {
     size_t freeMemory, totalMemory;
     cudaMemGetInfo(&freeMemory, &totalMemory);
-    return totalMemory - freeMemory;
+    return (totalMemory - freeMemory) / (1024 * 1024);
 }
 
 

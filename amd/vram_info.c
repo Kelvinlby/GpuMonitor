@@ -3,29 +3,29 @@
 
 
 /** Get total VRAM size
- * @return total VRAM in bytes
+ * @return total VRAM in MB
  */
-UINT64 amdTotalVram(void) {
+UINT32 amdTotalVram(void) {
     rsmi_init(0);
 
     UINT64 total = 0;
     rsmi_dev_memory_total_get(0, RSMI_MEM_TYPE_VRAM, &total);
 
-    UINT64 total_buf = total;
+    UINT64 total_buf = total / (1024 * 1024);
     rsmi_shut_down();
 
     return total_buf;
 }
 
 /** Get used VRAM size
- * @return used RAM in bytes
+ * @return used RAM in MB
  */
-UINT64 amdUsedVram(void) {
+UINT32 amdUsedVram(void) {
     rsmi_init(0);
 
     UINT64 used = 0;
     rsmi_dev_memory_usage_get(0, RSMI_MEM_TYPE_VRAM, &used);
-    UINT64 used_buf = used;
+    UINT64 used_buf = used / (1024 * 1024);
     rsmi_shut_down();
 
     return used_buf;

@@ -33,9 +33,9 @@ UINT8 getPlatform(void) {
 }
 
 /** Get total RAM size
- * @return total RAM in bytes
+ * @return total RAM in MB
  */
-UINT64 getTotalRam(void) {
+UINT32 getTotalRam(void) {
     struct sysinfo info;
 
     if (sysinfo(&info) != 0) {
@@ -43,14 +43,14 @@ UINT64 getTotalRam(void) {
         return 1;
     }
 
-    return info.totalram * info.mem_unit;
+    return info.totalram * info.mem_unit / (1024 * 1024);
 }
 
 
 /** Get free RAM size
- * @return free RAM in bytes
+ * @return free RAM in MB
  */
-UINT64 getFreeRam(void) {
+UINT32 getFreeRam(void) {
     struct sysinfo info;
 
     if (sysinfo(&info) != 0) {
@@ -58,61 +58,55 @@ UINT64 getFreeRam(void) {
         return 1;
     }
 
-    return info.freeram * info.mem_unit;
-}
+    UINT32 free = info.freeram * info.mem_unit / (1024 * 1024);
+    UINT32 cached = 0;
 
-
-/** Get cached memory size
- * @return cached RAM in bytes
- */
-UINT64 getCached() {
     FILE *f = fopen("/proc/meminfo", "r");
     if (f == NULL) {
         perror("Error opening /proc/meminfo");
     }
     char line[256];
-    UINT64 cached = 0;
 
     while (fgets(line, sizeof(line), f)) {
         if (strncmp(line, "Cached:", 7) == 0) {
-            sscanf(line + 7, "%ld", &cached);
+            sscanf(line + 7, "%u", &cached);
             break;
         }
     }
     fclose(f);
-    return cached * 1024;
+    return cached / 1024 + free;
 }
 
 
-/** Get available memory size
- * @return available RAM in bytes
+/** Get RAM usage
+ * @return Ram usage in percentage
  */
-UINT64 getAvailable(void) {
-    struct sysinfo info;
+UINT8 getRamUsage(void) {
+     struct sysinfo info;
 
     if (sysinfo(&info) != 0) {
         perror("sysinfo");
         return 1;
     }
 
+    UINT32 free = info.freeram * info.mem_unit / (1024 * 1024);
+    UINT32 cached = 0;
+
     FILE *f = fopen("/proc/meminfo", "r");
     if (f == NULL) {
-        perror("Error opening /proc/meminfo")
-        return 2;
+        perror("Error opening /proc/meminfo");
     }
-
     char line[256];
-    UINT64 cached = 0;
 
     while (fgets(line, sizeof(line), f)) {
         if (strncmp(line, "Cached:", 7) == 0) {
-            sscanf(line + 7, "%ld", &cached);
+            sscanf(line + 7, "%u", &cached);
             break;
         }
     }
     fclose(f);
+    UINT32 total = info.totalram * info.mem_unit / (1024 * 1024);
+    UINT32 available = cached / 1024 + free;
 
-    UINT64 free = info.freeram * info.mem_unit;
-    UINT64 available = free + cached * 1024;
-    return available;
+    return (UINT8)(100 * (1 - (FLOAT32)(available) / (FLOAT32)(total)));
 }
