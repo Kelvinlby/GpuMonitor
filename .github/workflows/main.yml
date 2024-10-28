@@ -1,0 +1,50 @@
+name: Build Library
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup CUDA Toolkit
+      uses: Jimver/cuda-toolkit@v0.2.11
+      with:
+        cuda: '12.1.0'
+        method: 'network'
+        sub-packages: '["nvcc", "cuda-libraries-dev", "cuda-compiler", "cuda-libraries", "cuda-runtime"]'
+
+    - name: Setup ROCm
+      run: |
+        wget -q -O - https://repo.radeon.com/rocm/rocm.gpg.key | sudo apt-key add -
+        echo 'deb [arch=amd64] https://repo.radeon.com/rocm/apt/debian/ ubuntu main' | sudo tee /etc/apt/sources.list.d/rocm.list
+        sudo apt-get update
+        sudo apt-get install -y rocm-dev
+
+    - name: Modify FindCUDA.cmake
+      run: |
+        FIND_CUDA_PATH=$(find /usr -name "FindCUDA.cmake" 2>/dev/null)
+        if [ ! -z "$FIND_CUDA_PATH" ]; then
+          sudo sed -i '/cmake_policy(GET CMP0146/,/endif()/d' $FIND_CUDA_PATH
+          sudo sed -i '/if(CMAKE_GENERATOR MATCHES "Visual Studio")/,/endif()/d' $FIND_CUDA_PATH
+        fi
+
+    - name: Configure CMake
+      run: |
+        mkdir build
+        cd build
+        cmake -DCMAKE_BUILD_TYPE=Release ..
+
+    - name: Build
+      run: |
+        cd build
+        cmake --build . --config Release
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: shared-library
+        path: build/lib/*.so
