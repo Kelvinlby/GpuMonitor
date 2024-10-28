@@ -8,21 +8,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Setup CUDA Toolkit
-      uses: Jimver/cuda-toolkit@v0.2.11
+      uses: Jimver/cuda-toolkit@v0.2.18
       with:
-        cuda: '12.1.0'
+        cuda: '12.6.0'
         method: 'network'
         sub-packages: '["nvcc", "cuda-libraries-dev", "cuda-compiler", "cuda-libraries", "cuda-runtime"]'
 
     - name: Setup ROCm
       run: |
-        wget -q -O - https://repo.radeon.com/rocm/rocm.gpg.key | sudo apt-key add -
-        echo 'deb [arch=amd64] https://repo.radeon.com/rocm/apt/debian/ ubuntu main' | sudo tee /etc/apt/sources.list.d/rocm.list
-        sudo apt-get update
-        sudo apt-get install -y rocm-dev
+        wget -q -O - https://repo.radeon.com/rocm/rocm.gpg.key | apt-key add -
+        echo 'deb [arch=amd64] https://repo.radeon.com/rocm/apt/debian/ ubuntu main' | tee /etc/apt/sources.list.d/rocm.list
+        apt-get update
+        apt-get install -y rocm-dev
 
     - name: Modify FindCUDA.cmake
       run: |
