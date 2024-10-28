@@ -17,6 +17,7 @@ add_library(GpuMonitor SHARED library.c
 )
 
 include_directories(/usr/local/cuda/include)
+include_directories(/opt/rocm/include)
 
 find_package(CUDA REQUIRED)
 target_link_libraries(GpuMonitor ${CUDA_LIBRARIES} nvidia-ml)
