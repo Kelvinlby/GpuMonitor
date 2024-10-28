@@ -23,7 +23,7 @@ find_package(CUDA REQUIRED)
 target_link_libraries(GpuMonitor ${CUDA_LIBRARIES} nvidia-ml)
 
 find_package(ROCM REQUIRED)
-target_link_libraries(GpuMonitor ${ROCM_LIBRARIES})
+target_link_libraries(GpuMonitor ${ROCM_LIBRARIES} rocm_smi64)
 
 
 
