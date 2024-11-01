@@ -36,5 +36,3 @@ if(CMAKE_GENERATOR MATCHES "Visual Studio")
   endif()
 endif()
 ```
-> 1. Please use 'rocm_smi.h' in this project to avoid errors when linking libraries.  
-> 2. Move 'amd/ROCMconfig.cmake' to your custom cmake module path
