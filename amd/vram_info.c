@@ -1,5 +1,5 @@
 #include "./../library.h"
-#include "./rocm_smi.h"
+#include <rocm_smi.h>
 
 
 /** Get total VRAM size
