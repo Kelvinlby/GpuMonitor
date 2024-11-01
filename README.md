@@ -1,24 +1,13 @@
-# GpuMonitor
+# GpuMonitor - `NVIDIA` Branch
 Access detailed GPU information with this shared library.
 
 ## Supported platform
-- Nvidia Series
-  - Nvidia Datacenter GPU
-  - Nvidia RTX Professional GPU
-  - Nvidia GeForce GPU
-- AMD Series
-  - AMD Radeon RX 7900 XTX
-  - AMD Radeon RX 7900 XT
-  - AMD Radeon RX 7900 GRE
-  - AMD Radeon PRO W7900
-  - AMD Radeon PRO W7900DS
-  - AMD Radeon PRO W7800
+- Nvidia Datacenter GPU
+- Nvidia RTX Professional GPU
+- Nvidia GeForce GPU
 
-> For full AMD compatibility information, refer to [ROCm](https://rocm.docs.amd.com/en/latest/compatibility/compatibility-matrix.html)
-
-## Pre-requirements
-- Linux system required (tested on Ubuntu)
-- CUDA 12.6 (or newer) and ROCm 6.1.3 (or newer)
+## Requirements
+- CUDA `12.6`
 
 ## Build Guide
 This project uses `FindCUDA` module from Cmake. However, you are not able to use it by default according to policy CMP0146.
