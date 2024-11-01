@@ -129,6 +129,30 @@ GpuMonitor/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/build
 .PHONY : GpuMonitor/fast
 
+amd.o: amd.c.o
+.PHONY : amd.o
+
+# target to build an object file
+amd.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/amd.c.o
+.PHONY : amd.c.o
+
+amd.i: amd.c.i
+.PHONY : amd.i
+
+# target to preprocess a source file
+amd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/amd.c.i
+.PHONY : amd.c.i
+
+amd.s: amd.c.s
+.PHONY : amd.s
+
+# target to generate assembly for a file
+amd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/amd.c.s
+.PHONY : amd.c.s
+
 library.o: library.c.o
 .PHONY : library.o
 
@@ -210,6 +234,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... GpuMonitor"
+	@echo "... amd.o"
+	@echo "... amd.i"
+	@echo "... amd.s"
 	@echo "... library.o"
 	@echo "... library.i"
 	@echo "... library.s"
