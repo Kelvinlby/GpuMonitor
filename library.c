@@ -9,14 +9,6 @@
  * @return platform code:   0 - CPU only;    1 - Nvidia GPU available;  2 - AMD GPU available;
  */
 UINT8 getPlatform(void) {
-    // Nvidia platform checking
-    int deviceCount = 0;
-    const cudaError_t error_id = cudaGetDeviceCount(&deviceCount);
-
-    if (error_id == cudaSuccess && deviceCount > 0) {
-        return 1;
-    }
-
     // AMD platform checking
     rsmi_init(0);
     UINT64 deviceId;

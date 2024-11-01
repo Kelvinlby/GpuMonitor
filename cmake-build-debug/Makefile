@@ -57,10 +57,10 @@ RM = /home/patrick/JetBrains_IDE/Clion/clion-2024.2.1/bin/cmake/linux/x64/bin/cm
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/patrick/clion_projects/BUFF/GpuMonitor
+CMAKE_SOURCE_DIR = /home/patrick/clion_projects/BUFF/Second_BUFF/GpuMonitor
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/patrick/clion_projects/BUFF/GpuMonitor/cmake-build-debug
+CMAKE_BINARY_DIR = /home/patrick/clion_projects/BUFF/Second_BUFF/GpuMonitor/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/patrick/clion_projects/BUFF/GpuMonitor/cmake-build-debug/CMakeFiles /home/patrick/clion_projects/BUFF/GpuMonitor/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/patrick/clion_projects/BUFF/Second_BUFF/GpuMonitor/cmake-build-debug/CMakeFiles /home/patrick/clion_projects/BUFF/Second_BUFF/GpuMonitor/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/patrick/clion_projects/BUFF/GpuMonitor/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/patrick/clion_projects/BUFF/Second_BUFF/GpuMonitor/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

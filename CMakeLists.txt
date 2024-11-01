@@ -8,11 +8,16 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${M
 
 set(CMAKE_C_STANDARD 23)
 
+set(CMAKE_SKIP_BUILD_RPATH FALSE)
+set(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
+set(CMAKE_INSTALL_RPATH "/opt/rocm/lib:/opt/rocm/lib64")
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+
 add_library(GpuMonitor SHARED library.c
         nvidia/vram_info.c
         nvidia/processor_info.c
-        amd/vram_info.c
         amd/processor_info.c
+        amd/vram_info.c
 )
 
 
@@ -38,3 +43,4 @@ target_link_libraries(GpuMonitor ${ROCM_LIBRARIES} ${ROCM_SMI_LIB})
 
 find_package(CUDA REQUIRED)
 target_link_libraries(GpuMonitor ${CUDA_LIBRARIES} nvidia-ml)
+

@@ -1,4 +1,4 @@
-# Install script for directory: /home/patrick/clion_projects/BUFF/GpuMonitor
+# Install script for directory: /home/patrick/clion_projects/BUFF/Second_BUFF/GpuMonitor
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/patrick/clion_projects/BUFF/GpuMonitor/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/patrick/clion_projects/BUFF/Second_BUFF/GpuMonitor/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
