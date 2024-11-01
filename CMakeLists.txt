@@ -25,7 +25,6 @@ link_directories(/opt/rocm/lib)
 link_directories(/opt/rocm/lib64)
 
 
-include_directories(/usr/local/cuda/include)
 include_directories(/opt/rocm/share/rocm/cmake)
 include_directories(/opt/rocm/include/rocm_smi)
 include_directories(/opt/rocm/include)
@@ -39,8 +38,3 @@ find_library(ROCM_SMI_LIB
         REQUIRED
 )
 target_link_libraries(GpuMonitor ${ROCM_LIBRARIES} ${ROCM_SMI_LIB})
-
-
-find_package(CUDA REQUIRED)
-target_link_libraries(GpuMonitor ${CUDA_LIBRARIES} nvidia-ml)
-
