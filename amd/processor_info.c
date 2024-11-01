@@ -1,5 +1,5 @@
 #include "./../library.h"
-#include "./rocm_smi.h"
+#include <rocm_smi.h>
 
 
 /** Get percentage of time device is busy doing any processing
