@@ -26,14 +26,26 @@ UINT8 getPlatform(void) {
  * @return total RAM in MB
  */
 UINT32 getTotalRam(void) {
-    struct sysinfo info;
+    UINT32 total = 0;
 
-    if (sysinfo(&info) != 0) {
-        perror("sysinfo");
-        return 1;
+    FILE *f = fopen("/proc/meminfo", "r");
+
+    if (f == NULL) {
+        perror("Error opening /proc/meminfo");
     }
 
-    return info.totalram * info.mem_unit / (1024 * 1024);
+    char line[64];
+
+    while (fgets(line, sizeof(line), f)) {
+        if (strncmp(line, "MemTotal:", 9) == 0) {
+            sscanf(line + 9, "%u", &total);
+            break;
+        }
+    }
+
+    fclose(f);
+
+    return total / 1024;
 }
 
 
@@ -41,14 +53,7 @@ UINT32 getTotalRam(void) {
  * @return free RAM in MB
  */
 UINT32 getFreeRam(void) {
-    struct sysinfo info;
-
-    if (sysinfo(&info) != 0) {
-        perror("sysinfo");
-        return 1;
-    }
-
-    UINT32 cached = 0;
+    UINT32 available = 0;
 
     FILE *f = fopen("/proc/meminfo", "r");
 
@@ -56,18 +61,18 @@ UINT32 getFreeRam(void) {
         perror("Error opening /proc/meminfo");
     }
 
-    char line[256];
+    char line[64];
 
     while (fgets(line, sizeof(line), f)) {
-        if (strncmp(line, "Cached:", 7) == 0) {
-            sscanf(line + 7, "%u", &cached);
+        if (strncmp(line, "MemAvailable:", 13) == 0) {
+            sscanf(line + 13, "%u", &available);
             break;
         }
     }
 
     fclose(f);
 
-    return cached / 1024 + info.freeram * info.mem_unit / (1024 * 1024);
+    return available / 1024;
 }
 
 
@@ -75,29 +80,36 @@ UINT32 getFreeRam(void) {
  * @return Ram usage in percentage
  */
 UINT8 getRamUsage(void) {
-     struct sysinfo info;
-
-    if (sysinfo(&info) != 0) {
-        perror("sysinfo");
-        return 1;
-    }
-
-    UINT32 cached = 0;
+    UINT32 available = 0;
+    UINT32 total = 0;
+    bool available_ready = false;
+    bool total_ready = false;
 
     FILE *f = fopen("/proc/meminfo", "r");
+
     if (f == NULL) {
         perror("Error opening /proc/meminfo");
     }
-    char line[256];
+
+    char line[64];
 
     while (fgets(line, sizeof(line), f)) {
-        if (strncmp(line, "Cached:", 7) == 0) {
-            sscanf(line + 7, "%u", &cached);
+        if (!available_ready && strncmp(line, "MemAvailable:", 13) == 0) {
+            sscanf(line + 13, "%u", &available);
+            available_ready = true;
+        }
+
+        if (!total_ready && strncmp(line, "MemTotal:", 9) == 0) {
+            sscanf(line + 9, "%u", &total);
+            total_ready = true;
+        }
+
+        if(total_ready && available_ready) {
             break;
         }
     }
 
     fclose(f);
 
-    return (UINT8) (100 * (1 - (FLOAT32) (cached * 1024 + info.freeram * info.mem_unit) / (FLOAT32) (info.totalram * info.mem_unit)));
+    return 100 * (1 - (FLOAT32) available / (FLOAT32) total);
 }
