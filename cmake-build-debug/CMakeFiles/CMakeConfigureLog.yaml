@@ -288,3 +288,43 @@ events:
       Running the C compiler's linker: "/usr/bin/ld" "-v"
       GNU ld (GNU Binutils for Ubuntu) 2.38
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/patrick/JetBrains_IDE/Clion/clion-2024.2.1/bin/cmake/linux/x64/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/patrick/JetBrains_IDE/Clion/clion-2024.2.1/bin/cmake/linux/x64/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/home/patrick/JetBrains_IDE/Clion/clion-2024.2.1/bin/cmake/linux/x64/share/cmake-3.29/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/home/patrick/JetBrains_IDE/Clion/clion-2024.2.1/bin/cmake/linux/x64/share/cmake-3.29/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/home/patrick/JetBrains_IDE/Clion/clion-2024.2.1/bin/cmake/linux/x64/share/cmake-3.29/Modules/FindCUDA.cmake:1059 (find_package)"
+      - "CMakeLists.txt:39 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/patrick/clion_projects/BUFF/GpuMonitor/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-oohOVY"
+      binary: "/home/patrick/clion_projects/BUFF/GpuMonitor/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-oohOVY"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fPIC"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/patrick/clion_projects/BUFF/GpuMonitor/cmake;/home/patrick/JetBrains_IDE/Clion/clion-2024.2.1/bin/cmake/linux/x64/share/cmake-3.29/Modules;/opt/rocm-6.1.3/share/rocmcmakebuildtools/cmake"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/patrick/clion_projects/BUFF/GpuMonitor/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-oohOVY'
+        
+        Run Build Command(s): /home/patrick/JetBrains_IDE/Clion/clion-2024.2.1/bin/cmake/linux/x64/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_0dff8/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_0dff8.dir/build.make CMakeFiles/cmTC_0dff8.dir/build
+        gmake[1]: Entering directory '/home/patrick/clion_projects/BUFF/GpuMonitor/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-oohOVY'
+        Building C object CMakeFiles/cmTC_0dff8.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -std=gnu2x -o CMakeFiles/cmTC_0dff8.dir/src.c.o -c /home/patrick/clion_projects/BUFF/GpuMonitor/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-oohOVY/src.c
+        Linking C executable cmTC_0dff8
+        /home/patrick/JetBrains_IDE/Clion/clion-2024.2.1/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0dff8.dir/link.txt --verbose=1
+        /usr/bin/cc -fPIC  CMakeFiles/cmTC_0dff8.dir/src.c.o -o cmTC_0dff8
+        gmake[1]: Leaving directory '/home/patrick/clion_projects/BUFF/GpuMonitor/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-oohOVY'
+        
+      exitCode: 0
+...

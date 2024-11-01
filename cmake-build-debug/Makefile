@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/kelvin/Application/JetBrains/clion/bin/cmake/linux/x64/bin/cmake
+CMAKE_COMMAND = /home/patrick/JetBrains_IDE/Clion/clion-2024.2.1/bin/cmake/linux/x64/bin/cmake
 
 # The command to remove a file.
-RM = /home/kelvin/Application/JetBrains/clion/bin/cmake/linux/x64/bin/cmake -E rm -f
+RM = /home/patrick/JetBrains_IDE/Clion/clion-2024.2.1/bin/cmake/linux/x64/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kelvin/Data/Code/C/GpuMonitor
+CMAKE_SOURCE_DIR = /home/patrick/clion_projects/BUFF/GpuMonitor
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kelvin/Data/Code/C/GpuMonitor/cmake-build-debug
+CMAKE_BINARY_DIR = /home/patrick/clion_projects/BUFF/GpuMonitor/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/kelvin/Data/Code/C/GpuMonitor/cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
-	/home/kelvin/Application/JetBrains/clion/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/patrick/JetBrains_IDE/Clion/clion-2024.2.1/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/home/kelvin/Application/JetBrains/clion/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/patrick/JetBrains_IDE/Clion/clion-2024.2.1/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kelvin/Data/Code/C/GpuMonitor/cmake-build-debug/CMakeFiles /home/kelvin/Data/Code/C/GpuMonitor/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/patrick/clion_projects/BUFF/GpuMonitor/cmake-build-debug/CMakeFiles /home/patrick/clion_projects/BUFF/GpuMonitor/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kelvin/Data/Code/C/GpuMonitor/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/patrick/clion_projects/BUFF/GpuMonitor/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,6 +128,54 @@ GpuMonitor: cmake_check_build_system
 GpuMonitor/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/build
 .PHONY : GpuMonitor/fast
+
+amd/processor_info.o: amd/processor_info.c.o
+.PHONY : amd/processor_info.o
+
+# target to build an object file
+amd/processor_info.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/amd/processor_info.c.o
+.PHONY : amd/processor_info.c.o
+
+amd/processor_info.i: amd/processor_info.c.i
+.PHONY : amd/processor_info.i
+
+# target to preprocess a source file
+amd/processor_info.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/amd/processor_info.c.i
+.PHONY : amd/processor_info.c.i
+
+amd/processor_info.s: amd/processor_info.c.s
+.PHONY : amd/processor_info.s
+
+# target to generate assembly for a file
+amd/processor_info.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/amd/processor_info.c.s
+.PHONY : amd/processor_info.c.s
+
+amd/vram_info.o: amd/vram_info.c.o
+.PHONY : amd/vram_info.o
+
+# target to build an object file
+amd/vram_info.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/amd/vram_info.c.o
+.PHONY : amd/vram_info.c.o
+
+amd/vram_info.i: amd/vram_info.c.i
+.PHONY : amd/vram_info.i
+
+# target to preprocess a source file
+amd/vram_info.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/amd/vram_info.c.i
+.PHONY : amd/vram_info.c.i
+
+amd/vram_info.s: amd/vram_info.c.s
+.PHONY : amd/vram_info.s
+
+# target to generate assembly for a file
+amd/vram_info.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/amd/vram_info.c.s
+.PHONY : amd/vram_info.c.s
 
 library.o: library.c.o
 .PHONY : library.o
@@ -210,6 +258,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... GpuMonitor"
+	@echo "... amd/processor_info.o"
+	@echo "... amd/processor_info.i"
+	@echo "... amd/processor_info.s"
+	@echo "... amd/vram_info.o"
+	@echo "... amd/vram_info.i"
+	@echo "... amd/vram_info.s"
 	@echo "... library.o"
 	@echo "... library.i"
 	@echo "... library.s"

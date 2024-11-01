@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <cuda_runtime.h>
-#include <rocm_cmi.h>
+#include <rocm_smi.h>
 
 /** Get which platform is supported (Nvidia platform is prioritized)
  * @return platform code:   0 - CPU only;    1 - Nvidia GPU available;  2 - AMD GPU available;
