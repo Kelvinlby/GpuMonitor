@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <cuda_runtime.h>
-
+#include <rocm_cmi.h>
 
 /** Get which platform is supported (Nvidia platform is prioritized)
  * @return platform code:   0 - CPU only;    1 - Nvidia GPU available;  2 - AMD GPU available;
@@ -16,6 +16,17 @@ UINT8 getPlatform(void) {
     if (error_id == cudaSuccess && deviceCount > 0) {
         return 1;
     }
+
+    // AMD platform checking
+    rsmi_init(0);
+    UINT64 deviceId;
+    const rsmi_status_t status = rsmi_dev_guid_get(0, &deviceId);
+
+    if (status == RSMI_STATUS_SUCCESS) {
+        return 2;
+    }
+
+    rsmi_shut_down();
 
     return 0;
 }

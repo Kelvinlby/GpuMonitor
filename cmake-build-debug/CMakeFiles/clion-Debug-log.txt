@@ -1,4 +1,19 @@
-/home/kelvin/Application/JetBrains/clion/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /home/kelvin/Data/Code/C/GpuMonitor -B /home/kelvin/Data/Code/C/GpuMonitor/cmake-build-debug
--- Configuring done (0.0s)
--- Generating done (0.0s)
--- Build files have been written to: /home/kelvin/Data/Code/C/GpuMonitor/cmake-build-debug
+/home/patrick/JetBrains_IDE/Clion/clion-2024.2.1/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /home/patrick/clion_projects/BUFF/GpuMonitor -B /home/patrick/clion_projects/BUFF/GpuMonitor/cmake-build-debug
+CMake Error at CMakeLists.txt:39 (find_package):
+  By not providing "FindCUDA.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "CUDA", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "CUDA" with any of
+  the following names:
+
+    CUDAConfig.cmake
+    cuda-config.cmake
+
+  Add the installation prefix of "CUDA" to CMAKE_PREFIX_PATH or set
+  "CUDA_DIR" to a directory containing one of the above files.  If "CUDA"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+
+
+-- Configuring incomplete, errors occurred!
