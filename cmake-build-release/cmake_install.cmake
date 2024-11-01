@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/Data/Code/C/GpuMonitor
+# Install script for directory: /home/kelvin/Data/Code/C/GpuMonitor
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/Data/Code/C/GpuMonitor/cmake-build-release/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/kelvin/Data/Code/C/GpuMonitor/cmake-build-release/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
