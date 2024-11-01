@@ -57,10 +57,10 @@ RM = /home/kelvin/Application/JetBrains/clion/bin/cmake/linux/x64/bin/cmake -E r
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/Data/Code/C/GpuMonitor
+CMAKE_SOURCE_DIR = /home/kelvin/Data/Code/C/GpuMonitor
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/Data/Code/C/GpuMonitor/cmake-build-release
+CMAKE_BINARY_DIR = /home/kelvin/Data/Code/C/GpuMonitor/cmake-build-release
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/Data/Code/C/GpuMonitor/cmake-build-release/CMakeFiles /mnt/Data/Code/C/GpuMonitor/cmake-build-release//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kelvin/Data/Code/C/GpuMonitor/cmake-build-release/CMakeFiles /home/kelvin/Data/Code/C/GpuMonitor/cmake-build-release//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/Data/Code/C/GpuMonitor/cmake-build-release/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kelvin/Data/Code/C/GpuMonitor/cmake-build-release/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,54 +128,6 @@ GpuMonitor: cmake_check_build_system
 GpuMonitor/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/build
 .PHONY : GpuMonitor/fast
-
-amd/processor_info.o: amd/processor_info.c.o
-.PHONY : amd/processor_info.o
-
-# target to build an object file
-amd/processor_info.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/amd/processor_info.c.o
-.PHONY : amd/processor_info.c.o
-
-amd/processor_info.i: amd/processor_info.c.i
-.PHONY : amd/processor_info.i
-
-# target to preprocess a source file
-amd/processor_info.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/amd/processor_info.c.i
-.PHONY : amd/processor_info.c.i
-
-amd/processor_info.s: amd/processor_info.c.s
-.PHONY : amd/processor_info.s
-
-# target to generate assembly for a file
-amd/processor_info.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/amd/processor_info.c.s
-.PHONY : amd/processor_info.c.s
-
-amd/vram_info.o: amd/vram_info.c.o
-.PHONY : amd/vram_info.o
-
-# target to build an object file
-amd/vram_info.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/amd/vram_info.c.o
-.PHONY : amd/vram_info.c.o
-
-amd/vram_info.i: amd/vram_info.c.i
-.PHONY : amd/vram_info.i
-
-# target to preprocess a source file
-amd/vram_info.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/amd/vram_info.c.i
-.PHONY : amd/vram_info.c.i
-
-amd/vram_info.s: amd/vram_info.c.s
-.PHONY : amd/vram_info.s
-
-# target to generate assembly for a file
-amd/vram_info.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GpuMonitor.dir/build.make CMakeFiles/GpuMonitor.dir/amd/vram_info.c.s
-.PHONY : amd/vram_info.c.s
 
 library.o: library.c.o
 .PHONY : library.o
@@ -258,12 +210,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... GpuMonitor"
-	@echo "... amd/processor_info.o"
-	@echo "... amd/processor_info.i"
-	@echo "... amd/processor_info.s"
-	@echo "... amd/vram_info.o"
-	@echo "... amd/vram_info.i"
-	@echo "... amd/vram_info.s"
 	@echo "... library.o"
 	@echo "... library.i"
 	@echo "... library.s"
