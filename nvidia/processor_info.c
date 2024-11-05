@@ -1,8 +1,5 @@
 #include "./../library.h"
 
-#include <cuda_runtime.h>
-#include <nvml.h>
-
 
 /** Get average Cuda core utilization of all Nvidia GPUs
  * @return percentage of Cuda core utilization

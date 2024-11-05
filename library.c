@@ -2,7 +2,6 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <cuda_runtime.h>
 #include <rocm_smi.h>
 
 /** Get which platform is supported (Nvidia platform is prioritized)

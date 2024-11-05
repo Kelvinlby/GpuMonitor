@@ -1,7 +1,5 @@
 #include "./../library.h"
 
-#include <cuda_runtime_api.h>
-
 
 /** Get total VRAM size
  * @return total VRAM in MB
