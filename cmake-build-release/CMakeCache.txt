@@ -208,9 +208,6 @@ CUDA_CUDART_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libcudart.so
 //"cuda" library (older versions only).
 CUDA_CUDA_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libcuda.so
 
-//The directory containing a CMake configuration file for CUDA.
-CUDA_DIR:PATH=CUDA_DIR-NOTFOUND
-
 //Directory to put all the output files.  If blank it will default
 // to the CMAKE_CURRENT_BINARY_DIR
 CUDA_GENERATED_OUTPUT_DIR:PATH=
@@ -343,9 +340,6 @@ GpuMonitor_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 GpuMonitor_SOURCE_DIR:STATIC=/home/kelvin/Data/Code/C/GpuMonitor
 
-//The directory containing a CMake configuration file for ROCM.
-ROCM_DIR:PATH=ROCM_DIR-NOTFOUND
-
 
 ########################
 # INTERNAL cache entries
@@ -360,9 +354,9 @@ CMAKE_CACHEFILE_DIR:INTERNAL=/home/kelvin/Data/Code/C/GpuMonitor/cmake-build-rel
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=29
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=30
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=6
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=5
 //Path to CMake executable.
 CMAKE_COMMAND:INTERNAL=/home/kelvin/Application/JetBrains/clion/bin/cmake/linux/x64/bin/cmake
 //Path to cpack program executable.
@@ -447,7 +441,7 @@ CMAKE_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_READELF
 CMAKE_READELF-ADVANCED:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=/home/kelvin/Application/JetBrains/clion/bin/cmake/linux/x64/share/cmake-3.29
+CMAKE_ROOT:INTERNAL=/home/kelvin/Application/JetBrains/clion/bin/cmake/linux/x64/share/cmake-3.30
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG
@@ -545,8 +539,6 @@ CUDA_curand_LIBRARY-ADVANCED:INTERNAL=1
 CUDA_cusolver_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_cusparse_LIBRARY
 CUDA_cusparse_LIBRARY-ADVANCED:INTERNAL=1
-//Location of make2cmake.cmake
-CUDA_make2cmake:INTERNAL=/home/kelvin/Application/JetBrains/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/FindCUDA/make2cmake.cmake
 //ADVANCED property for variable: CUDA_nppc_LIBRARY
 CUDA_nppc_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_nppial_LIBRARY
@@ -571,12 +563,8 @@ CUDA_nppitc_LIBRARY-ADVANCED:INTERNAL=1
 CUDA_npps_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_nvToolsExt_LIBRARY
 CUDA_nvToolsExt_LIBRARY-ADVANCED:INTERNAL=1
-//Location of parse_cubin.cmake
-CUDA_parse_cubin:INTERNAL=/home/kelvin/Application/JetBrains/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/FindCUDA/parse_cubin.cmake
 //ADVANCED property for variable: CUDA_rt_LIBRARY
 CUDA_rt_LIBRARY-ADVANCED:INTERNAL=1
-//Location of run_nvcc.cmake
-CUDA_run_nvcc:INTERNAL=/home/kelvin/Application/JetBrains/clion/bin/cmake/linux/x64/share/cmake-3.29/Modules/FindCUDA/run_nvcc.cmake
 //Details about finding CUDA
 FIND_PACKAGE_MESSAGE_DETAILS_CUDA:INTERNAL=[/usr][/usr/bin/nvcc][/usr/include][/usr/lib/x86_64-linux-gnu/libcudart_static.a][v12.1()]
 //Details about finding Threads
