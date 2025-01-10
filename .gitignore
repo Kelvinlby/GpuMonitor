@@ -51,3 +51,6 @@ Module.symvers
 Mkfile.old
 dkms.conf
 cmake-build-release/Testing/Temporary/LastTest.log
+.idea/editor.xml
+cmake-build-debug/CMakeFiles/clion-Debug-log.txt
+cmake-build-release/CMakeFiles/clion-Release-log.txt
